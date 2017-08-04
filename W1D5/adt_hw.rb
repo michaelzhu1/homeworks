@@ -13,7 +13,7 @@ class Stack
   end
 
   def show
-    @ivar
+    @ivar.dup
   end
 end
 
@@ -32,7 +32,7 @@ class Queue
   end
 
   def show
-    @line
+    @line.dup
   end
 
 end
