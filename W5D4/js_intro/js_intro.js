@@ -21,7 +21,7 @@ function fizzBuzz(array) {
 function isPrime(number) {
   if (number < 2) { return false;}
 
-  for (let i = 2; i < n; i++) {
+  for (let i = 2; i < number; i++) {
     if (number % i === 0) {
       return false;
     }
@@ -36,11 +36,11 @@ function sumOfNPrimes(n) {
   let i = 2;
 
   while (count < n) {
-    if (isPrim(i)) {
+    if (isPrime(i)) {
       sum += i;
-      count++
+      count++;
     }
-    i++
+    i++;
   }
   return sum;
 }
@@ -48,7 +48,7 @@ function sumOfNPrimes(n) {
 function titleize(names, callback) {
   let titleized = names.map(name => `Mx. ${name} Jingleheimer Schmidt`);
   callback(titleized);
-};
+}
 
 
 
@@ -71,7 +71,7 @@ Elephant.prototype.addTrick = function (trick) {
 };
 
 Elephant.prototype.play = function () {
-  trickIndex = Math.floor(Math.random() * this.tricks.length);
+  let trickIndex = Math.floor(Math.random() * this.tricks.length);
   console.log(`${this.name} is ${this.tricks[trickIndex]}!`);
 };
 
@@ -89,4 +89,4 @@ function dinerBreakfast() {
     order = `${order.slice(0, order.length - 8)} and ${food} please.`;
     console.log(order);
   };
-};
+}
